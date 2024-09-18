@@ -1,0 +1,64 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">              
+  <a class="navbar-brand" href="#">Navbar</a> 
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> 
+  
+   <div class="container" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div> 
+ </nav> 
+ <body class="bg"> 
+  <!-- <img src="assets/img/aaa.jpg" alt="Asteroid"> -->
+
+ <div class="container-fluid main">
+  <body class="bg"></body>
+  <!-- <img src="assets/img/aaa.jpg" alt="Asteroid"> -->
+  <div class="row">
+    
+</div>
+<div class="left-img " alt="..."></div>
+  <div class="row ml-2">
+    
+    <div class="main_container">
+      
+    <div class="col-4">
+      
+      <label for="start-date" class="form-label">Start Date <span>*</span></label>
+      <input id="start-date" type="date" class="form-control" [(ngModel)]="startDate" (change)="fetchData()" />
+    </div>
+    <div class="col-4 ">
+      <label for="end-date" class="form-label">End Date <span>*</span></label>
+      <input id="end-date" type="date"  class="form-control" [(ngModel)]="endDate" (change)="fetchData()" />
+    </div>
+    <canvas *ngIf="showGraph" baseChart [type]="'line'" width="100" [data]="chartData" [options]="chartOptions"></canvas>
+
+  </div>
+ </div>
+</div>
